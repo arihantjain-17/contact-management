@@ -5,7 +5,7 @@ const contactController = require('../controller/contactcontroller');
 // POST - Add new contact
 router.post('/newcontact', contactController.addContact);
 
-// GET - Retrieve all contacts
+// GET - Retrieve all contacts 
 router.get('/getcontact', contactController.getAllContacts);
 
 // PUT - Update a contact by ID
