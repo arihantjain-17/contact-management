@@ -3,15 +3,16 @@ const router = express.Router();
 const contactController = require('../controller/contactcontroller');
 
 // POST - Add new contact
-router.post('/', contactController.addContact);
+router.post('/newcontact', contactController.addContact);
 
 // GET - Retrieve all contacts
-router.get('/', contactController.getAllContacts);
+router.get('/getcontact', contactController.getAllContacts);
 
 // PUT - Update a contact by ID
-router.put('/:id', contactController.updateContact);
+router.put('/updatecontact/:id', contactController.updateContact);
 
 // DELETE - Delete a contact by ID
-router.delete('/:id', contactController.deleteContact);
+router.delete('/deletecontact/:id', contactController.deleteContact);
 
 module.exports = router;
+ 

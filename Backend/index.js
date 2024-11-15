@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-// const cors = require('cors');
-// app.use(cors);
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.json());
 
@@ -17,6 +17,6 @@ const contactRoutes = require('./routes/contactroutes');
 
 // Use contact routes
 app.use('/contacts', contactRoutes);
+ 
 
-
-require("./config/database").connect();
+require("./config/database").connect(); 
